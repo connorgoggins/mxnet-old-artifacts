@@ -170,7 +170,7 @@ python ../../tools/launch.py -n 2 -H hosts --sync-dst-dir /tmp/mxnet \
 
 ### Gradient compression
 
-If your model has fully connected components or recurrent neural networks, you may achieve increased training speed using gradient compression with potentially slight loss of accuracy. Please see [Gradient Compression](https://mxnet.incubator.apache.org/versions/master/faq/gradient_compression.html) for more details on when and how to use it. For the above example, gradient compression can be enabled by running the following:
+If your model has fully connected components or recurrent neural networks, you may achieve increased training speed using gradient compression with potentially slight loss of accuracy. Please see [Gradient Compression](/versions/master/faq/gradient_compression.html) for more details on when and how to use it. For the above example, gradient compression can be enabled by running the following:
 
 ```bash
 python ../../tools/launch.py -n 2 --launcher ssh -H hosts python train_mnist.py --network lenet \

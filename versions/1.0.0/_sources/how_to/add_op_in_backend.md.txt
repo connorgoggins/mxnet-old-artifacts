@@ -94,7 +94,7 @@ skip passing 0-value parameters through the quadratic operator interface. You
 can choose not to define the default value for a parameter if it is required
 at runtime. Meanwhile, adding brief descriptions to the parameters enables
 the documentation engine to display them on
-[MXNet documentation web page](https://mxnet.incubator.apache.org/api/python/index.html).
+[MXNet documentation web page](/api/python/index.html).
 
 ### Attribute Inference
 Attribute inference is the process of deducing the properties of `NDArray`s

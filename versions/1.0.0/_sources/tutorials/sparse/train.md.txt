@@ -17,11 +17,11 @@ To complete this tutorial, we need:
 pip install jupyter requests
 ```
 
-- Basic knowledge of Symbol in MXNet. See the detailed tutorial for Symbol in [Symbol - Neural Network Graphs and Auto-differentiation](https://mxnet.incubator.apache.org/tutorials/basic/symbol.html).
+- Basic knowledge of Symbol in MXNet. See the detailed tutorial for Symbol in [Symbol - Neural Network Graphs and Auto-differentiation](/tutorials/basic/symbol.html).
 
-- Basic knowledge of CSRNDArray in MXNet. See the detailed tutorial for CSRNDArray in [CSRNDArray - NDArray in Compressed Sparse Row Storage Format](https://mxnet.incubator.apache.org/versions/master/tutorials/sparse/csr.html).
+- Basic knowledge of CSRNDArray in MXNet. See the detailed tutorial for CSRNDArray in [CSRNDArray - NDArray in Compressed Sparse Row Storage Format](/versions/master/tutorials/sparse/csr.html).
 
-- Basic knowledge of RowSparseNDArray in MXNet. See the detailed tutorial for RowSparseNDArray in [RowSparseNDArray - NDArray for Sparse Gradient Updates](https://mxnet.incubator.apache.org/versions/master/tutorials/sparse/row_sparse.html).
+- Basic knowledge of RowSparseNDArray in MXNet. See the detailed tutorial for RowSparseNDArray in [RowSparseNDArray - NDArray for Sparse Gradient Updates](/versions/master/tutorials/sparse/row_sparse.html).
 
 ## Variables
 
@@ -162,8 +162,8 @@ The function you will explore is: *y = x<sub>1</sub>  +  2x<sub>2</sub> + ... 10
 
 ### Preparing the Data
 
-In MXNet, both [mx.io.LibSVMIter](https://mxnet.incubator.apache.org/versions/master/api/python/io.html#mxnet.io.LibSVMIter)
-and [mx.io.NDArrayIter](https://mxnet.incubator.apache.org/versions/master/api/python/io.html#mxnet.io.NDArrayIter)
+In MXNet, both [mx.io.LibSVMIter](/versions/master/api/python/io.html#mxnet.io.LibSVMIter)
+and [mx.io.NDArrayIter](/versions/master/api/python/io.html#mxnet.io.NDArrayIter)
 support loading sparse data in CSR format. In this example, we'll use the `NDArrayIter`.
 
 You may see some warnings from SciPy. You don't need to worry about those for this example.

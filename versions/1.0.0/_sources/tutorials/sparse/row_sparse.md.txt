@@ -59,7 +59,7 @@ To complete this tutorial, we need:
     ```
     pip install jupyter
     ```
-- Basic knowledge of NDArray in MXNet. See the detailed tutorial for NDArray in [NDArray - Imperative tensor operations on CPU/GPU](https://mxnet.incubator.apache.org/tutorials/basic/ndarray.html)
+- Basic knowledge of NDArray in MXNet. See the detailed tutorial for NDArray in [NDArray - Imperative tensor operations on CPU/GPU](/tutorials/basic/ndarray.html)
 - Understanding of [automatic differentiation with autograd](http://gluon.mxnet.io/chapter01_crashcourse/autograd.html)
 - GPUs - A section of this tutorial uses GPUs. If you don't have GPUs on your
 machine, simply set the variable `gpu_device` (set in the GPUs section of this
@@ -361,8 +361,8 @@ sgd.update(0, weight, grad, momentum)
 {"weight.asnumpy()":weight.asnumpy(), "momentum.asnumpy()":momentum.asnumpy()}
 ```
 
-Note that both [mxnet.optimizer.SGD](https://mxnet.incubator.apache.org/api/python/optimization.html#mxnet.optimizer.SGD)
-and [mxnet.optimizer.Adam](https://mxnet.incubator.apache.org/api/python/optimization.html#mxnet.optimizer.Adam) support sparse updates in MXNet.
+Note that both [mxnet.optimizer.SGD](/api/python/optimization.html#mxnet.optimizer.SGD)
+and [mxnet.optimizer.Adam](/api/python/optimization.html#mxnet.optimizer.Adam) support sparse updates in MXNet.
 
 ## Advanced Topics
 
