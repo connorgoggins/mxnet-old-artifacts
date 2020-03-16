@@ -235,7 +235,7 @@ These devices can be located on a single machine or across multiple machines.
 In this document, we describe how to train a model with devices distributed across machines in a data parallel way.</p>
 <p>When models are so large that they don’t fit into device memory, then a second way called <em>model parallelism</em> is useful.
 Here, different devices are assigned the task of learning different parts of the model.
-Currently, MXNet supports Model parallelism in a single machine only. Refer <a class="reference external" href="https://mxnet.incubator.apache.org/versions/master/faq/model_parallel_lstm.html">Training with multiple GPUs using model parallelism</a> for more on this.</p>
+Currently, MXNet supports Model parallelism in a single machine only. Refer <a class="reference external" href="/versions/master/faq/model_parallel_lstm.html">Training with multiple GPUs using model parallelism</a> for more on this.</p>
 </div>
 <div class="section" id="how-does-distributed-training-work">
 <span id="how-does-distributed-training-work"></span><h2>How Does Distributed Training Work?<a class="headerlink" href="#how-does-distributed-training-work" title="Permalink to this headline">¶</a></h2>
@@ -268,7 +268,7 @@ In this case, each <code class="docutils literal"><span class="pre">push</span><
 with a string argument which contains the word <code class="docutils literal"><span class="pre">dist</span></code> as follows:</p>
 <blockquote>
 <div>kv = mxnet.kvstore.create(‘dist_sync’)</div></blockquote>
-<p>Refer <a class="reference external" href="https://mxnet.incubator.apache.org/versions/master/api/python/kvstore/kvstore.html">KVStore API</a> for more information about KVStore.</p>
+<p>Refer <a class="reference external" href="/versions/master/api/python/kvstore/kvstore.html">KVStore API</a> for more information about KVStore.</p>
 </div>
 <div class="section" id="distribution-of-keys">
 <span id="distribution-of-keys"></span><h3>Distribution of Keys<a class="headerlink" href="#distribution-of-keys" title="Permalink to this headline">¶</a></h3>
@@ -289,7 +289,7 @@ we can use <code class="docutils literal"><span class="pre">mxnet.gluon.utils.sp
 <p>In the case of distributed training though, we would need to divide the dataset into <code class="docutils literal"><span class="pre">n</span></code> parts at the beginning, so that each worker gets a different part. Each worker can then use <code class="docutils literal"><span class="pre">split_and_load</span></code> to again divide that part of the dataset across different devices on a single machine.</p>
 <p>Typically, this split of data for each worker happens through the data iterator,
 on passing the number of parts and the index of parts to iterate over.
-Some iterators in MXNet that support this feature are <a class="reference external" href="https://mxnet.incubator.apache.org/versions/master/api/python/io/io.html#mxnet.io.MNISTIter">mxnet.io.MNISTIterator</a> and <a class="reference external" href="https://mxnet.incubator.apache.org/versions/master/api/python/io/io.html#mxnet.io.ImageRecordIter">mxnet.io.ImageRecordIter</a>.
+Some iterators in MXNet that support this feature are <a class="reference external" href="/versions/master/api/python/io/io.html#mxnet.io.MNISTIter">mxnet.io.MNISTIterator</a> and <a class="reference external" href="/versions/master/api/python/io/io.html#mxnet.io.ImageRecordIter">mxnet.io.ImageRecordIter</a>.
 If you are using a different iterator, you can look at how the above iterators implement this.
 We can use the kvstore object to get the number of workers (<code class="docutils literal"><span class="pre">kv.num_workers</span></code>) and rank of the current worker (<code class="docutils literal"><span class="pre">kv.rank</span></code>).
 These can be passed as arguments to the iterator.
@@ -321,7 +321,7 @@ This is faster than <code class="docutils literal"><span class="pre">dist_sync</
 <span id="gradient-compression"></span><h3>Gradient Compression<a class="headerlink" href="#gradient-compression" title="Permalink to this headline">¶</a></h3>
 <p>When communication is expensive, and the ratio of computation time to communication time is low, communication can become a bottleneck.
 In such cases, gradient compression can be used to reduce the cost of communication, thereby speeding up training.
-Refer <a class="reference external" href="https://mxnet.incubator.apache.org/versions/master/faq/gradient_compression.html">Gradient compression</a> for more details.</p>
+Refer <a class="reference external" href="/versions/master/faq/gradient_compression.html">Gradient compression</a> for more details.</p>
 <p>Note: For small models when the cost of computation is much lower than cost of communication,
 distributed training might actually be slower than training on a single machine because of the overhead of communication and synchronization.</p>
 </div>
@@ -351,7 +351,7 @@ The options in the following command are the recommended options when mounting a
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mkdir</span> <span class="n">efs</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">mount</span> <span class="o">-</span><span class="n">t</span> <span class="n">nfs4</span> <span class="o">-</span><span class="n">o</span> <span class="n">nfsvers</span><span class="o">=</span><span class="mf">4.1</span><span class="p">,</span><span class="n">rsize</span><span class="o">=</span><span class="mi">1048576</span><span class="p">,</span><span class="n">wsize</span><span class="o">=</span><span class="mi">1048576</span><span class="p">,</span><span class="n">hard</span><span class="p">,</span><span class="n">timeo</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span><span class="n">retrans</span><span class="o">=</span><span class="mi">2</span> <span class="n">NETWORK_FILE_SYSTEM_IP</span><span class="p">:</span><span class="o">/</span> <span class="n">efs</span>
 </pre></div>
 </div>
-<p>Tip: You might find it helpful to store large datasets on S3 for easy access from all machines in the cluster. Refer <a class="reference external" href="https://mxnet.incubator.apache.org/versions/master/faq/s3_integration.html">Using data from S3 for training</a> for more information.</p>
+<p>Tip: You might find it helpful to store large datasets on S3 for easy access from all machines in the cluster. Refer <a class="reference external" href="/versions/master/faq/s3_integration.html">Using data from S3 for training</a> for more information.</p>
 </div>
 <div class="section" id="using-launch-py">
 <span id="using-launch-py"></span><h3>Using Launch.py<a class="headerlink" href="#using-launch-py" title="Permalink to this headline">¶</a></h3>

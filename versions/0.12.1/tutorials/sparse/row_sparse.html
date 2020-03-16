@@ -277,14 +277,14 @@ In this tutorial, we will describe what the row sparse format is and how to use 
 <span id="prerequisites"></span><h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
 <p>To complete this tutorial, we need:</p>
 <ul>
-<li><p class="first">MXNet. See the instructions for your operating system in <a class="reference external" href="https://mxnet.incubator.apache.org/versions/0.12.1/get_started/install.html">Setup and Installation</a></p>
+<li><p class="first">MXNet. See the instructions for your operating system in <a class="reference external" href="/versions/0.12.1/get_started/install.html">Setup and Installation</a></p>
 </li>
 <li><p class="first"><a class="reference external" href="http://jupyter.org/">Jupyter</a></p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">jupyter</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Basic knowledge of NDArray in MXNet. See the detailed tutorial for NDArray in <a class="reference external" href="https://mxnet.incubator.apache.org/tutorials/basic/ndarray.html">NDArray - Imperative tensor operations on CPU/GPU</a></p>
+<li><p class="first">Basic knowledge of NDArray in MXNet. See the detailed tutorial for NDArray in <a class="reference external" href="/tutorials/basic/ndarray.html">NDArray - Imperative tensor operations on CPU/GPU</a></p>
 </li>
 <li><p class="first">Understanding of <a class="reference external" href="http://gluon.mxnet.io/chapter01_crashcourse/autograd.html">automatic differentiation with autograd</a></p>
 </li>
@@ -465,7 +465,7 @@ the storage type of destination array will not change when copying with <code cl
 </div>
 <div class="section" id="sparse-operators-and-storage-type-inference">
 <span id="sparse-operators-and-storage-type-inference"></span><h2>Sparse Operators and Storage Type Inference<a class="headerlink" href="#sparse-operators-and-storage-type-inference" title="Permalink to this headline">¶</a></h2>
-<p>Operators that have specialized implementation for sparse arrays can be accessed in <code class="docutils literal"><span class="pre">mx.nd.sparse</span></code>. You can read the <a class="reference external" href="https://mxnet.incubator.apache.org/versions/0.12.1/versions/master/api/python/ndarray/sparse.html">mxnet.ndarray.sparse API documentation</a> to find what sparse operators are available.</p>
+<p>Operators that have specialized implementation for sparse arrays can be accessed in <code class="docutils literal"><span class="pre">mx.nd.sparse</span></code>. You can read the <a class="reference external" href="/versions/0.12.1/versions/master/api/python/ndarray/sparse.html">mxnet.ndarray.sparse API documentation</a> to find what sparse operators are available.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 <span class="n">indptr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -535,8 +535,8 @@ in <code class="docutils literal"><span class="pre">gradient.indices</span></cod
 <span class="p">{</span><span class="s2">"weight.asnumpy()"</span><span class="p">:</span><span class="n">weight</span><span class="o">.</span><span class="n">asnumpy</span><span class="p">(),</span> <span class="s2">"momentum.asnumpy()"</span><span class="p">:</span><span class="n">momentum</span><span class="o">.</span><span class="n">asnumpy</span><span class="p">()}</span>
 </pre></div>
 </div>
-<p>Note that both <a class="reference external" href="https://mxnet.incubator.apache.org/api/python/optimization.html#mxnet.optimizer.SGD">mxnet.optimizer.SGD</a>
-and <a class="reference external" href="https://mxnet.incubator.apache.org/api/python/optimization.html#mxnet.optimizer.Adam">mxnet.optimizer.Adam</a> support sparse updates in MXNet.</p>
+<p>Note that both <a class="reference external" href="/api/python/optimization.html#mxnet.optimizer.SGD">mxnet.optimizer.SGD</a>
+and <a class="reference external" href="/api/python/optimization.html#mxnet.optimizer.Adam">mxnet.optimizer.Adam</a> support sparse updates in MXNet.</p>
 </div>
 <div class="section" id="advanced-topics">
 <span id="advanced-topics"></span><h2>Advanced Topics<a class="headerlink" href="#advanced-topics" title="Permalink to this headline">¶</a></h2>

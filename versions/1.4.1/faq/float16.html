@@ -258,18 +258,18 @@
 <span id="training-or-inference"></span><h3>Training or Inference<a class="headerlink" href="#training-or-inference" title="Permalink to this headline">¶</a></h3>
 <p>With Gluon, you need to take care of three things to convert a model to support float16.</p>
 <ol class="simple">
-<li>Cast the Gluon Block, so as to cast the parameters of layers and change the type of input expected, to float16. This is as simple as calling the <a class="reference external" href="https://mxnet.incubator.apache.org/api/python/gluon/gluon.html#mxnet.gluon.Block.cast">cast</a> method of the Block representing the network.</li>
+<li>Cast the Gluon Block, so as to cast the parameters of layers and change the type of input expected, to float16. This is as simple as calling the <a class="reference external" href="/api/python/gluon/gluon.html#mxnet.gluon.Block.cast">cast</a> method of the Block representing the network.</li>
 </ol>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">net</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="s1">'float16'</span><span class="p">)</span>
 </pre></div>
 </div>
 <ol class="simple">
-<li>Ensure the data input to the network is of float16 type. If your DataLoader or Iterator produces output in another datatype, then you would have to cast your data. There are different ways you can do this. The easiest would be to use the <a class="reference external" href="https://mxnet.incubator.apache.org/api/python/ndarray/ndarray.html#mxnet.ndarray.NDArray.astype"><code class="docutils literal"><span class="pre">astype</span></code></a> method of ndarrays.</li>
+<li>Ensure the data input to the network is of float16 type. If your DataLoader or Iterator produces output in another datatype, then you would have to cast your data. There are different ways you can do this. The easiest would be to use the <a class="reference external" href="/api/python/ndarray/ndarray.html#mxnet.ndarray.NDArray.astype"><code class="docutils literal"><span class="pre">astype</span></code></a> method of ndarrays.</li>
 </ol>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float16'</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If you are using images and DataLoader, you can also use a <a class="reference external" href="https://mxnet.incubator.apache.org/api/python/gluon/data.html#mxnet.gluon.data.vision.transforms.Cast">Cast transform</a></p>
+<p>If you are using images and DataLoader, you can also use a <a class="reference external" href="/api/python/gluon/data.html#mxnet.gluon.data.vision.transforms.Cast">Cast transform</a></p>
 <ol class="simple">
 <li>It is preferable to use <strong>multi_precision mode of optimizer</strong> when training in float16. This mode of optimizer maintains a master copy of weights in float32 even when the training (i.e. forward and backward pass) is in float16. This helps increase precision of the weight updates and can lead to faster convergence for some networks. (Further discussion on this towards the end.)</li>
 </ol>
