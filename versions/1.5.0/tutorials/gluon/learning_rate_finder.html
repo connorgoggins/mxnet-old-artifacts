@@ -238,7 +238,7 @@
 <!--- under the License. --><div class="section" id="learning-rate-finder">
 <span id="learning-rate-finder"></span><h1>Learning Rate Finder<a class="headerlink" href="#learning-rate-finder" title="Permalink to this headline">¶</a></h1>
 <p>Setting the learning rate for stochastic gradient descent (SGD) is crucially important when training neural network because it controls both the speed of convergence and the ultimate performance of the network. Set the learning too low and you could be twiddling your thumbs for quite some time as the parameters update very slowly. Set it too high and the updates will skip over optimal solutions, or worse the optimizer might not converge at all!</p>
-<p>Leslie Smith from the U.S. Naval Research Laboratory presented a method for finding a good learning rate in a paper called <a class="reference external" href="https://arxiv.org/abs/1506.01186">“Cyclical Learning Rates for Training Neural Networks”</a>. We implement this method in MXNet (with the Gluon API) and create a ‘Learning Rate Finder’ which you can use while training your own networks. We take a look at the central idea of the paper, cyclical learning rate schedules, in the <a class="reference external" href="/tutorials/gluon/learning_rate_schedules_advanced.html">‘Advanced Learning Rate Schedules’</a> tutorial.</p>
+<p>Leslie Smith from the U.S. Naval Research Laboratory presented a method for finding a good learning rate in a paper called <a class="reference external" href="https://arxiv.org/abs/1506.01186">“Cyclical Learning Rates for Training Neural Networks”</a>. We implement this method in MXNet (with the Gluon API) and create a ‘Learning Rate Finder’ which you can use while training your own networks. We take a look at the central idea of the paper, cyclical learning rate schedules, in the <a class="reference external" href="/versions/1.5.0/tutorials/gluon/learning_rate_schedules_advanced.html">‘Advanced Learning Rate Schedules’</a> tutorial.</p>
 <div class="section" id="simple-idea">
 <span id="simple-idea"></span><h2>Simple Idea<a class="headerlink" href="#simple-idea" title="Permalink to this headline">¶</a></h2>
 <p>Given an initialized network, a defined loss and a training dataset we take the following steps:</p>
@@ -496,7 +496,7 @@
 </div>
 <div class="section" id="wrap-up">
 <span id="wrap-up"></span><h2>Wrap Up<a class="headerlink" href="#wrap-up" title="Permalink to this headline">¶</a></h2>
-<p>Give Learning Rate Finder a try on your current projects, and experiment with the different learning rate schedules found in the tutorials <a class="reference external" href="/tutorials/gluon/learning_rate_schedules.html">here</a> and <a class="reference external" href="/tutorials/gluon/learning_rate_schedules_advanced.html">here</a>.</p>
+<p>Give Learning Rate Finder a try on your current projects, and experiment with the different learning rate schedules found in the tutorials <a class="reference external" href="/versions/1.5.0/tutorials/gluon/learning_rate_schedules.html">here</a> and <a class="reference external" href="/versions/1.5.0/tutorials/gluon/learning_rate_schedules_advanced.html">here</a>.</p>
 <div class="btn-group" role="group">
 <div class="download-btn"><a download="learning_rate_finder.ipynb" href="learning_rate_finder.ipynb"><span class="glyphicon glyphicon-download-alt"></span> learning_rate_finder.ipynb</a></div></div></div>
 </div>

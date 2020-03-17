@@ -237,7 +237,7 @@
 <!--- specific language governing permissions and limitations -->
 <!--- under the License. --><div class="section" id="symbol-neural-network-graphs">
 <span id="symbol-neural-network-graphs"></span><h1>Symbol - Neural network graphs<a class="headerlink" href="#symbol-neural-network-graphs" title="Permalink to this headline">¶</a></h1>
-<p>In a <a class="reference external" href="/tutorials/basic/ndarray.html">previous tutorial</a>, we introduced <code class="docutils literal"><span class="pre">NDArray</span></code>,
+<p>In a <a class="reference external" href="/versions/1.5.0/tutorials/basic/ndarray.html">previous tutorial</a>, we introduced <code class="docutils literal"><span class="pre">NDArray</span></code>,
 the basic data structure for manipulating data in MXNet.
 And just using NDArray by itself, we can execute a wide range of mathematical operations.
 In fact, we could define and update a full neural network just by using <code class="docutils literal"><span class="pre">NDArray</span></code>.
@@ -562,7 +562,7 @@ and <code class="docutils literal"><span class="pre">backward</span></code> (if 
 <p>Logically symbols correspond to ndarrays. They both represent a tensor. They both
 are inputs/outputs of operators. We can either serialize a <code class="docutils literal"><span class="pre">Symbol</span></code> object by
 using <code class="docutils literal"><span class="pre">pickle</span></code>, or by using <code class="docutils literal"><span class="pre">save</span></code> and <code class="docutils literal"><span class="pre">load</span></code> methods directly as we discussed in
-<a class="reference external" href="/tutorials/basic/ndarray.html#serialize-from-to-distributed-filesystems">NDArray tutorial</a>.</p>
+<a class="reference external" href="/versions/1.5.0/tutorials/basic/ndarray.html#serialize-from-to-distributed-filesystems">NDArray tutorial</a>.</p>
 <p>When serializing <code class="docutils literal"><span class="pre">NDArray</span></code>, we serialize the tensor data in it and directly dump to
 disk in binary format.
 But symbol uses a concept of graph. Graphs are composed by chaining operators. They are

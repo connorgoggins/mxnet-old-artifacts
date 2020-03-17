@@ -386,9 +386,9 @@ two variables for input data: <em>data</em> for the training examples
 and <em>softmax_label</em> contains the respective labels and the <em>softmax_output</em>.</p>
 <p>The <em>data</em> variables are called free variables in MXNet’s Symbol API.
 To execute a Symbol, they need to be bound with data.
-<a class="reference external" href="/tutorials/basic/symbol.html">Click here learn more about Symbol</a>.</p>
+<a class="reference external" href="/versions/1.5.0/tutorials/basic/symbol.html">Click here learn more about Symbol</a>.</p>
 <p>We use the data iterator to feed examples to a neural network via MXNet’s <code class="docutils literal"><span class="pre">module</span></code> API.
-<a class="reference external" href="/tutorials/basic/module.html">Click here to learn more about Module</a>.</p>
+<a class="reference external" href="/versions/1.5.0/tutorials/basic/module.html">Click here to learn more about Module</a>.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
 <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
 
@@ -541,7 +541,7 @@ An example of how to use the script for converting to <em>RecordIO</em> format i
 <ul class="simple">
 <li>Using <code class="docutils literal"><span class="pre">mx.io.ImageRecordIter</span></code> which is fast but not very flexible. It is great for simple tasks like image recognition but won’t work for more complex tasks like detection and segmentation.</li>
 <li>Using <code class="docutils literal"><span class="pre">mx.recordio.unpack_img</span></code> (or <code class="docutils literal"><span class="pre">cv2.imread</span></code>, <code class="docutils literal"><span class="pre">skimage</span></code>, etc) + <code class="docutils literal"><span class="pre">numpy</span></code> is flexible but slow due to Python Global Interpreter Lock (GIL).</li>
-<li>Using MXNet provided <code class="docutils literal"><span class="pre">mx.image</span></code> package. It stores images in <a class="reference external" href="/tutorials/basic/ndarray.html"><strong><code class="docutils literal"><span class="pre">NDArray</span></code></strong></a> format and leverages MXNet’s <a class="reference external" href="/architecture/note_engine.html">dependency engine</a> to automatically parallelize processing and circumvent GIL.</li>
+<li>Using MXNet provided <code class="docutils literal"><span class="pre">mx.image</span></code> package. It stores images in <a class="reference external" href="/versions/1.5.0/tutorials/basic/ndarray.html"><strong><code class="docutils literal"><span class="pre">NDArray</span></code></strong></a> format and leverages MXNet’s <a class="reference external" href="/architecture/note_engine.html">dependency engine</a> to automatically parallelize processing and circumvent GIL.</li>
 </ul>
 <p>Below, we demonstrate some of the frequently used preprocessing routines provided by the <code class="docutils literal"><span class="pre">mx.image</span></code> package.</p>
 <p>Let’s download sample images that we can work with.</p>

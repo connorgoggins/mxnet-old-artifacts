@@ -346,7 +346,7 @@ Epoch: 0; Batch 900; Loss 0.008402 <!--notebook-skip-line-->
 </pre></div>
 </div>
 <p>Note that to do this, we need the definition of the network as Python code. If we want to recreate this network on a different machine using the saved weights, we need the same Python code (<code class="docutils literal"><span class="pre">build_lenet</span></code>) that created the network to create the <code class="docutils literal"><span class="pre">new_net</span></code> object shown above. This means Python code needs to be copied over to any machine where we want to run this network.</p>
-<p>If our network is <a class="reference external" href="/tutorials/gluon/hybrid.html">Hybrid</a>, we can even save the network architecture into files and we won’t need the network definition in a Python file to load the network. We’ll see how to do it in the next section.</p>
+<p>If our network is <a class="reference external" href="/versions/1.2.1/tutorials/gluon/hybrid.html">Hybrid</a>, we can even save the network architecture into files and we won’t need the network definition in a Python file to load the network. We’ll see how to do it in the next section.</p>
 <p>Let’s test the model we just loaded from file.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 
@@ -386,7 +386,7 @@ Epoch: 0; Batch 900; Loss 0.008402 <!--notebook-skip-line-->
 </div>
 <div class="section" id="saving-model-parameters-and-architecture-to-file">
 <span id="saving-model-parameters-and-architecture-to-file"></span><h2>Saving model parameters AND architecture to file<a class="headerlink" href="#saving-model-parameters-and-architecture-to-file" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="/tutorials/gluon/hybrid.html">Hybrid</a> models can be serialized as JSON files using the <code class="docutils literal"><span class="pre">export</span></code> function. Once serialized, these models can be loaded from other language bindings like C++ or Scala for faster inference or inference in different environments.</p>
+<p><a class="reference external" href="/versions/1.2.1/tutorials/gluon/hybrid.html">Hybrid</a> models can be serialized as JSON files using the <code class="docutils literal"><span class="pre">export</span></code> function. Once serialized, these models can be loaded from other language bindings like C++ or Scala for faster inference or inference in different environments.</p>
 <p>Note that the network we created above is not a Hybrid network and therefore cannot be serialized into a JSON file. So, let’s create a Hybrid version of the same network and train it.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">net</span> <span class="o">=</span> <span class="n">build_lenet</span><span class="p">(</span><span class="n">gluon</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">HybridSequential</span><span class="p">())</span>
 <span class="n">net</span><span class="o">.</span><span class="n">hybridize</span><span class="p">()</span>

@@ -286,7 +286,7 @@ We have prepared a utility file to help you download and organize your data into
 <span class="kn">from</span> <span class="nn">mxnet.gluon.model_zoo.vision</span> <span class="kn">import</span> <span class="n">resnet50_v2</span>
 </pre></div>
 </div>
-<p>Next, we define the hyper-parameters that we will use for fine-tuning. We will use the <a class="reference external" href="/tutorials/gluon/learning_rate_schedules.html">MXNet learning rate scheduler</a> to adjust learning rates during training.
+<p>Next, we define the hyper-parameters that we will use for fine-tuning. We will use the <a class="reference external" href="/versions/1.5.0/tutorials/gluon/learning_rate_schedules.html">MXNet learning rate scheduler</a> to adjust learning rates during training.
 Here we set the <code class="docutils literal"><span class="pre">epochs</span></code> to 1 for quick demonstration, please change to 40 for actual training.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">classes</span> <span class="o">=</span> <span class="mi">102</span>
 <span class="n">epochs</span> <span class="o">=</span> <span class="mi">1</span>
@@ -306,7 +306,7 @@ Here we set the <code class="docutils literal"><span class="pre">epochs</span></
 <span class="n">batch_size</span> <span class="o">=</span> <span class="n">per_device_batch_size</span> <span class="o">*</span> <span class="nb">max</span><span class="p">(</span><span class="n">num_gpus</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Now we will apply data augmentations on training images. This makes minor alterations on the training images, and our model will consider them as distinct images. This can be very useful for fine-tuning on a relatively small dataset, and it will help improve the model. We can use the Gluon <a class="reference external" href="/tutorials/gluon/datasets.html">DataSet API</a>, <a class="reference external" href="/tutorials/gluon/datasets.html">DataLoader API</a>, and <a class="reference external" href="/tutorials/gluon/data_augmentation.html">Transform API</a> to load the images and apply the following data augmentations:</p>
+<p>Now we will apply data augmentations on training images. This makes minor alterations on the training images, and our model will consider them as distinct images. This can be very useful for fine-tuning on a relatively small dataset, and it will help improve the model. We can use the Gluon <a class="reference external" href="/versions/1.5.0/tutorials/gluon/datasets.html">DataSet API</a>, <a class="reference external" href="/versions/1.5.0/tutorials/gluon/datasets.html">DataLoader API</a>, and <a class="reference external" href="/versions/1.5.0/tutorials/gluon/data_augmentation.html">Transform API</a> to load the images and apply the following data augmentations:</p>
 <ol class="simple">
 <li>Randomly crop the image and resize it to 224x224</li>
 <li>Randomly flip the image horizontally</li>
@@ -366,7 +366,7 @@ Here we set the <code class="docutils literal"><span class="pre">epochs</span></
 <div class="section" id="loading-pre-trained-model">
 <span id="loading-pre-trained-model"></span><h3>Loading pre-trained model<a class="headerlink" href="#loading-pre-trained-model" title="Permalink to this headline">¶</a></h3>
 <p>We will use pre-trained ResNet50_v2 model which was pre-trained on the <a class="reference external" href="http://www.image-net.org/">ImageNet Dataset</a> with 1000 classes. To match the classes in the Flower dataset, we must redefine the last softmax (output) layer to be 102, then initialize the parameters.</p>
-<p>Before we go to training, one unique Gluon feature you should be aware of is hybridization. It allows you to convert your imperative code to a static symbolic graph, which is much more efficient to execute. There are two main benefits of hybridizing your model: better performance and easier serialization for deployment. The best part is that it’s as simple as just calling <code class="docutils literal"><span class="pre">net.hybridize()</span></code>. To know more about Gluon hybridization, please follow the <a class="reference external" href="/tutorials/gluon/hybrid.html">hybridization tutorial</a>.</p>
+<p>Before we go to training, one unique Gluon feature you should be aware of is hybridization. It allows you to convert your imperative code to a static symbolic graph, which is much more efficient to execute. There are two main benefits of hybridizing your model: better performance and easier serialization for deployment. The best part is that it’s as simple as just calling <code class="docutils literal"><span class="pre">net.hybridize()</span></code>. To know more about Gluon hybridization, please follow the <a class="reference external" href="/versions/1.5.0/tutorials/gluon/hybrid.html">hybridization tutorial</a>.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># load pre-trained resnet50_v2 from model zoo</span>
 <span class="n">finetune_net</span> <span class="o">=</span> <span class="n">resnet50_v2</span><span class="p">(</span><span class="n">pretrained</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">ctx</span><span class="o">=</span><span class="n">ctx</span><span class="p">)</span>
 
@@ -458,7 +458,7 @@ Here we set the <code class="docutils literal"><span class="pre">epochs</span></
 <span id="load-the-model-and-run-inference-using-the-mxnet-module-api"></span><h2>Load the model and run inference using the MXNet Module API<a class="headerlink" href="#load-the-model-and-run-inference-using-the-mxnet-module-api" title="Permalink to this headline">¶</a></h2>
 <p>MXNet provides various useful tools and interfaces for deploying your model for inference. For example, you can use <a class="reference external" href="https://github.com/awslabs/mxnet-model-server">MXNet Model Server</a> to start a service and host your trained model easily.
 Besides that, you can also use MXNet’s different language APIs to integrate your model with your existing service. We provide <a class="reference external" href="/api/python/module/module.html">Python</a>,    <a class="reference external" href="/api/java/index.html">Java</a>, <a class="reference external" href="/api/scala/index.html">Scala</a>, and <a class="reference external" href="/api/c++/index.html">C++</a> APIs.</p>
-<p>Here we will briefly introduce how to run inference using Module API in Python. There is more detailed explanation available in the <a class="reference external" href="/tutorials/python/predict_image.html">Predict Image Tutorial</a>.
+<p>Here we will briefly introduce how to run inference using Module API in Python. There is more detailed explanation available in the <a class="reference external" href="/versions/1.5.0/tutorials/python/predict_image.html">Predict Image Tutorial</a>.
 In general, prediction consists of the following steps:</p>
 <ol class="simple">
 <li>Load the model architecture (symbol file) and trained parameter values (params file)</li>
@@ -507,8 +507,8 @@ In general, prediction consists of the following steps:</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/apache/incubator-mxnet/tree/master/scala-package/examples/src/main/java/org/apache/mxnetexamples/javaapi/infer">Java Inference examples</a></li>
-<li class="toctree-l1"><a class="reference external" href="/tutorials/scala/">Scala Inference examples</a></li>
-<li class="toctree-l1"><a class="reference external" href="/tutorials/onnx/inference_on_onnx_model.html">ONNX model inference examples</a></li>
+<li class="toctree-l1"><a class="reference external" href="/versions/1.5.0/tutorials/scala/">Scala Inference examples</a></li>
+<li class="toctree-l1"><a class="reference external" href="/versions/1.5.0/tutorials/onnx/inference_on_onnx_model.html">ONNX model inference examples</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/awslabs/mxnet-model-server/tree/master/examples">MXNet Model Server Examples</a></li>
 </ul>
 </div>
