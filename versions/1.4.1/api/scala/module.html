@@ -311,7 +311,7 @@ If you simply want to fit a module, you don’t need to call <code class="docuti
 <div class="highlight-scala"><div class="highlight"><pre><span></span>    <span class="n">mod</span><span class="o">.</span><span class="n">predict</span><span class="o">(</span><span class="n">val_dataiter</span><span class="o">)</span>
 </pre></div>
 </div>
-<p>The module collects and returns all of the prediction results. For more details about the format of the return values, see the documentation for the <a class="reference external" href="http://mxnet.incubator.apache.org/api/scala/docs/index.html#org.apache.mxnet.module.BaseModule"><code class="docutils literal"><span class="pre">predict()</span></code> function</a>.</p>
+<p>The module collects and returns all of the prediction results. For more details about the format of the return values, see the documentation for the <a class="reference external" href="/versions/1.4.1/api/scala/docs/index.html#org.apache.mxnet.module.BaseModule"><code class="docutils literal"><span class="pre">predict()</span></code> function</a>.</p>
 <p>When prediction results might be too large to fit in memory, use the <code class="docutils literal"><span class="pre">predictEveryBatch</span></code> API:</p>
 <div class="highlight-scala"><div class="highlight"><pre><span></span>    <span class="k">val</span> <span class="n">preds</span> <span class="k">=</span> <span class="n">mod</span><span class="o">.</span><span class="n">predictEveryBatch</span><span class="o">(</span><span class="n">val_dataiter</span><span class="o">)</span>
     <span class="n">val_dataiter</span><span class="o">.</span><span class="n">reset</span><span class="o">()</span>
