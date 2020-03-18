@@ -799,13 +799,13 @@ pip install graphviz
 </div> <!-- END of GPU -->
 </div> <!-- END of Python -->
 <!-- END - Linux Python GPU Installation Instructions --><div class="r">
-<div class="cpu"><p>The default version of R that is installed with <code class="docutils literal"><span class="pre">apt-get</span></code> is insufficient. You will need to first <a class="reference external" href="http://mxnet.io/install/ubuntu_setup.html#install-the-mxnet-package-for-r">install R v3.4.4+ and build MXNet from source</a>.</p>
+<div class="cpu"><p>The default version of R that is installed with <code class="docutils literal"><span class="pre">apt-get</span></code> is insufficient. You will need to first <a class="reference external" href="/versions/1.3.1/install/ubuntu_setup.html#install-the-mxnet-package-for-r">install R v3.4.4+ and build MXNet from source</a>.</p>
 <p>After you have setup R v3.4.4+ and MXNet, you can build and install the MXNet R bindings with the following, assuming that <code class="docutils literal"><span class="pre">incubator-mxnet</span></code> is the source directory you used to build MXNet as follows:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> incubator-mxnet
 $ make rpkg
 </pre></div>
 </div>
-</div> <!-- END of CPU --><div class="gpu"><p>The default version of R that is installed with <code class="docutils literal"><span class="pre">apt-get</span></code> is insufficient. You will need to first <a class="reference external" href="http://mxnet.io/install/ubuntu_setup.html#install-the-mxnet-package-for-r">install R v3.4.4+ and build MXNet from source</a>.</p>
+</div> <!-- END of CPU --><div class="gpu"><p>The default version of R that is installed with <code class="docutils literal"><span class="pre">apt-get</span></code> is insufficient. You will need to first <a class="reference external" href="/versions/1.3.1/install/ubuntu_setup.html#install-the-mxnet-package-for-r">install R v3.4.4+ and build MXNet from source</a>.</p>
 <p>After you have setup R v3.4.4+ and MXNet, you can build and install the MXNet R bindings with the following, assuming that <code class="docutils literal"><span class="pre">incubator-mxnet</span></code> is the source directory you used to build MXNet as follows:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> incubator-mxnet
 $ make rpkg
@@ -1063,7 +1063,7 @@ Alternatively, you may follow the <a class="reference external" href="https://do
 </div> <!-- END of GPU -->
 </div> <!-- END of Python --><!-- START - MacOS R CPU Installation Instructions --><div class="r">
 <div class="cpu"><p>Install the latest version (3.5.1+) of R from <a class="reference external" href="https://cran.r-project.org/bin/macosx/">CRAN</a>.
-You can <a class="reference external" href="http://mxnet.io/install/osx_setup.html#install-the-mxnet-package-for-r">build MXNet-R from source</a>, or you can use a pre-built binary:</p>
+You can <a class="reference external" href="/versions/1.3.1/install/osx_setup.html#install-the-mxnet-package-for-r">build MXNet-R from source</a>, or you can use a pre-built binary:</p>
 <div class="highlight-r"><div class="highlight"><pre><span></span><span class="n">cran</span> <span class="o">&lt;-</span> <span class="nf">getOption</span><span class="p">(</span><span class="s">&quot;repos&quot;</span><span class="p">)</span>
 <span class="n">cran[</span><span class="s">&quot;dmlc&quot;</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="s">&quot;https://apache-mxnet.s3-accelerate.dualstack.amazonaws.com/R/CRAN/&quot;</span>
 <span class="nf">options</span><span class="p">(</span><span class="n">repos</span> <span class="o">=</span> <span class="n">cran</span><span class="p">)</span>
@@ -1269,14 +1269,14 @@ Next, we install the <code class="docutils literal"><span class="pre">graphviz</
 </div> <!-- End of GPU -->
 </div> <!-- End of Python --><!-- START - Windows R CPU Installation Instructions --><div class="r">
 <div class="cpu"><p>Install the latest version (3.5.1+) of R from <a class="reference external" href="https://cran.r-project.org/bin/windows/">CRAN</a>.
-You can <a class="reference external" href="http://mxnet.io/install/windows_setup.html#install-mxnet-package-for-r">build MXNet-R from source</a>, or you can use a pre-built binary:</p>
+You can <a class="reference external" href="/versions/1.3.1/install/windows_setup.html#install-mxnet-package-for-r">build MXNet-R from source</a>, or you can use a pre-built binary:</p>
 <div class="highlight-r"><div class="highlight"><pre><span></span><span class="n">cran</span> <span class="o">&lt;-</span> <span class="nf">getOption</span><span class="p">(</span><span class="s">&quot;repos&quot;</span><span class="p">)</span>
 <span class="n">cran[</span><span class="s">&quot;dmlc&quot;</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="s">&quot;https://apache-mxnet.s3-accelerate.dualstack.amazonaws.com/R/CRAN/&quot;</span>
 <span class="nf">options</span><span class="p">(</span><span class="n">repos</span> <span class="o">=</span> <span class="n">cran</span><span class="p">)</span>
 <span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;mxnet&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div> <!-- END - Windows R CPU --><div class="gpu"><p>You can <a class="reference external" href="http://mxnet.io/install/windows_setup.html#install-mxnet-package-for-r">build MXNet-R from source</a>, or you can use a pre-built binary:</p>
+</div> <!-- END - Windows R CPU --><div class="gpu"><p>You can <a class="reference external" href="/versions/1.3.1/install/windows_setup.html#install-mxnet-package-for-r">build MXNet-R from source</a>, or you can use a pre-built binary:</p>
 <div class="highlight-r"><div class="highlight"><pre><span></span>  <span class="n">cran</span> <span class="o">&lt;-</span> <span class="nf">getOption</span><span class="p">(</span><span class="s">&quot;repos&quot;</span><span class="p">)</span>
   <span class="n">cran[</span><span class="s">&quot;dmlc&quot;</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="s">&quot;https://apache-mxnet.s3-accelerate.dualstack.amazonaws.com/R/CRAN/GPU/cu92&quot;</span>
   <span class="nf">options</span><span class="p">(</span><span class="n">repos</span> <span class="o">=</span> <span class="n">cran</span><span class="p">)</span>
@@ -1396,7 +1396,7 @@ then running:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>ci/docker/runtime_functions.sh build_wheel python/ <span class="k">$(</span>realpath build<span class="k">)</span>
 </pre></div>
 </div>
-<p>You are now ready to run MXNet on your Raspberry Pi device. You can get started by following the tutorial on <a class="reference external" href="http://mxnet.io/tutorials/embedded/wine_detector.html">Real-time Object Detection with MXNet On The Raspberry Pi</a>.</p>
+<p>You are now ready to run MXNet on your Raspberry Pi device. You can get started by following the tutorial on <a class="reference external" href="/versions/1.3.1/tutorials/embedded/wine_detector.html">Real-time Object Detection with MXNet On The Raspberry Pi</a>.</p>
 <p><em>Note - Because the complete MXNet library takes up a significant amount of the Raspberry Pi&#8217;s limited RAM, when loading training data or large models into memory, you might have to turn off the GUI and terminate running processes to free RAM.</em></p>
 </div> <!-- End of raspberry pi --><div class="nvidia-jetson"></div>
 </div>
