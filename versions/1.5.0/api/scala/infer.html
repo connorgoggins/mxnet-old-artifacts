@@ -251,7 +251,7 @@
 </div>
 <div class="section" id="inference">
 <span id="inference"></span><h2>Inference<a class="headerlink" href="#inference" title="Permalink to this headline">¶</a></h2>
-<p>The Scala Infer API includes both single image and batch modes. Here is an example of running inference on a single image by using the <code class="docutils literal"><span class="pre">ImageClassifier</span></code> class. A complete <a class="reference external" href="https://github.com/apache/incubator-mxnet/blob/master/scala-package/examples/src/main/scala/org/apache/mxnetexamples/infer/imageclassifier/ImageClassifierExample.scala">image classification example</a> using ResNet-152 is provided in the <a class="reference external" href="https://github.com/apache/incubator-mxnet/tree/master/scala-package/examples/src/main/scala/org/apache/mxnetexamples">Scala package’s example folder</a>. This example also demonstrates inference with batches of images.</p>
+<p>The Scala Infer API includes both single image and batch modes. Here is an example of running inference on a single image by using the <code class="docutils literal"><span class="pre">ImageClassifier</span></code> class. A complete <a class="reference external" href="https://github.com/apache/incubator-mxnet/blob/1.5.0/scala-package/examples/src/main/scala/org/apache/mxnetexamples/infer/imageclassifier/ImageClassifierExample.scala">image classification example</a> using ResNet-152 is provided in the <a class="reference external" href="https://github.com/apache/incubator-mxnet/tree/1.5.0/scala-package/examples/src/main/scala/org/apache/mxnetexamples">Scala package’s example folder</a>. This example also demonstrates inference with batches of images.</p>
 <div class="highlight-scala"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">runInferenceOnSingleImage</span><span class="o">(</span><span class="n">modelPathPrefix</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="n">inputImagePath</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span>
                               <span class="n">context</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">Context</span><span class="o">])</span><span class="k">:</span>
 <span class="kt">IndexedSeq</span><span class="o">[</span><span class="kt">IndexedSeq</span><span class="o">[(</span><span class="kt">String</span>, <span class="kt">Float</span><span class="o">)]]</span> <span class="k">=</span> <span class="o">{</span>
@@ -280,8 +280,8 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference external" href="/versions/1.5.0/api/scala/docs/index.html#org.apache.mxnet.infer.package">Infer API Scaladocs</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/apache/incubator-mxnet/tree/master/scala-package/examples/src/main/scala/org/apache/mxnetexamples/infer/objectdetector">Single Shot Detector Inference Example</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/apache/incubator-mxnet/tree/master/scala-package/examples/src/main/scala/org/apache/mxnetexamples/infer/imageclassifier">Image Classification Example</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/apache/incubator-mxnet/tree/1.5.0/scala-package/examples/src/main/scala/org/apache/mxnetexamples/infer/objectdetector">Single Shot Detector Inference Example</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/apache/incubator-mxnet/tree/1.5.0/scala-package/examples/src/main/scala/org/apache/mxnetexamples/infer/imageclassifier">Image Classification Example</a></li>
 </ul>
 </div>
 </div>

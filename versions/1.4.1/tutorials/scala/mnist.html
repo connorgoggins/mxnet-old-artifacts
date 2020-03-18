@@ -244,7 +244,7 @@
 <p>To complete this tutorial, we need:</p>
 <ul class="simple">
 <li>to compile the latest MXNet version. See the MXNet installation instructions for your operating system in <a class="reference external" href="/versions/1.4.1/install/index.html">Setup and Installation</a>.</li>
-<li>to compile the Scala API. See Scala API build instructions in <a class="reference external" href="https://github.com/dmlc/mxnet/tree/master/scala-package">Build</a>.</li>
+<li>to compile the Scala API. See Scala API build instructions in <a class="reference external" href="https://github.com/dmlc/mxnet/tree/1.4.1/scala-package">Build</a>.</li>
 </ul>
 </div>
 <div class="section" id="define-the-network">
@@ -267,7 +267,7 @@
 <div class="section" id="load-the-data">
 <span id="load-the-data"></span><h2>Load the Data<a class="headerlink" href="#load-the-data" title="Permalink to this headline">¶</a></h2>
 <p>Then, load the training and validation data using DataIterators.</p>
-<p>You can download the MNIST data using the <a class="reference external" href="https://github.com/dmlc/mxnet/blob/master/scala-package/core/scripts/get_mnist_data.sh">get_mnist_data script</a>. We’ve already written a DataIterator for the MNIST dataset:</p>
+<p>You can download the MNIST data using the <a class="reference external" href="https://github.com/dmlc/mxnet/blob/1.4.1/scala-package/core/scripts/get_mnist_data.sh">get_mnist_data script</a>. We’ve already written a DataIterator for the MNIST dataset:</p>
 <div class="highlight-scala"><div class="highlight"><pre><span></span><span class="c1">// load MNIST dataset</span>
 <span class="k">val</span> <span class="n">trainDataIter</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">.</span><span class="nc">MNISTIter</span><span class="o">(</span><span class="nc">Map</span><span class="o">(</span>
   <span class="s">"image"</span> <span class="o">-></span> <span class="s">"data/train-images-idx3-ubyte"</span><span class="o">,</span>
@@ -347,7 +347,7 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference external" href="/versions/1.4.1/api/scala/">Scala API</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/dmlc/mxnet/tree/master/scala-package/examples/">More Scala Examples</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/dmlc/mxnet/tree/1.4.1/scala-package/examples/">More Scala Examples</a></li>
 <li class="toctree-l1"><a class="reference external" href="/versions/1.4.1/tutorials/index.html">MXNet tutorials index</a></li>
 </ul>
 </div>
