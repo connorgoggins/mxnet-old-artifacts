@@ -1,2 +1,2 @@
-# mxnet-old-artifacts
-Old static artifacts for the MXNet website
+# mxnet-website-artifacts
+This repository manages changes to static artifacts for the MXNet website.
