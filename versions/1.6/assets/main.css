@@ -1018,6 +1018,12 @@ figure {
 li.opt.versions {
   padding: 10px; }
 
+li.opt.versions:hover { 
+  background-color: #048ccc; }
+
+li.opt.versions:hover a { 
+  color: whitesmoke; }
+
 .dropdown {
   position: relative;
   display: inline-block;
